@@ -1,0 +1,400 @@
+HTML:
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaLLink | Tecnologia e Saúde Humanizada</title>
+    <meta name="description" content="Vitalink: Conectando saúde e tecnologia com atendimento humanizado">
+    <meta name="keywords" content="saúde, consultas, medicina, tecnologia saúde, atendimento humanizado">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="accessibility-bar">
+        <div class="container">
+            <button id="font-increase" aria-label="Aumentar fonte">A+</button>
+            <button id="font-decrease" aria-label="Diminuir fonte">A-</button>
+            <button id="high-contrast" aria-label="Alto contraste"><i class="fas fa-adjust"></i></button>
+            <button id="read-page" aria-label="Ler página"><i class="fas fa-volume-up"></i></button>
+        </div>
+    </div>
+
+    <header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="img/VITALLINK TECNOLOGIA.jpg" alt="Vitallink" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#tecnologia" class="nav-link scroll-link">Serviços</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#equipe" class="nav-link">Equipe</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+               
+            
+          
+</header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>VitaLLink: Cuidando da sua saúde com excelência</h1>
+                <p>Tecnologia de ponta, profissionais qualificados e atendimento humanizado para a sua melhor experiência em saúde.</p>
+                <div class="hero-actions">
+                    <a href="#agendamento" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Marque sua consulta</a>
+                    <a href="#tecnologia" class="btn btn-secondary"><i class="fas fa-procedures"></i> Conheça nossos serviços</a>
+                </div>
+            </div>
+            
+    </section>
+
+   <section class="features-section">
+    <div class="container">
+        <h2 class="section-title">Nossos Recursos</h2>
+        <p class="section-subtitle">Tecnologia pensada para facilitar o acesso à saúde para a população idosa</p>
+        
+        <div class="features-grid">
+            <!-- Recurso 1 - Coração -->
+            <div class="feature-container">
+                <div class="feature-icon heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Inovação que cuida</h3>
+                <p>Nosso aplicativo foi pensado para a saúde da população idosa</p>
+            </div>
+            
+            <!-- Recurso 2 - Lembretes -->
+            <div class="feature-container">
+                <div class="feature-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Lembretes automáticos</h3>
+                <p>Nunca mais perca uma consulta ou horário de medicação</p>
+            </div>
+            
+            <!-- Recurso 3 - Chat -->
+            <div class="feature-container">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Chat com médicos</h3>
+                <p>Tire dúvidas rapidamente com profissionais de saúde</p>
+            </div>
+            
+            <!-- Recurso 4 - Prontuário -->
+            <div class="feature-container">
+                <div class="feature-icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <h3>Prontuário eletrônico</h3>
+                <p>Sistema acessível e seguro para idosos</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="agendamento-section" id="agendamento">
+        <div class="container">
+            <h2 class="section-title">Agendamento Rápido</h2>
+            <p class="section-subtitle">Preencha os dados para marcar sua consulta</p>
+            
+            <form id="agendamento-form" class="agendamento-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ag-nome">Nome Completo*</label>
+                        <input type="text" id="ag-nome" name="nome" required>
+                        <div class="error-message" id="ag-nome-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ag-telefone">Telefone*</label>
+                        <input type="tel" id="ag-telefone" name="telefone" required>
+                        <div class="error-message" id="ag-telefone-error"></div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ag-especialista">Especialista*</label>
+                        <select id="ag-especialista" name="especialista" required>
+                            <option value="">Selecione um especialista</option>
+                            <option value="Cardiologista">Cardiologista</option>
+                            <option value="Dermatologista">Dermatologista</option>
+                            <option value="Ortopedista">Ortopedista</option>
+                            <option value="Pediatra">Pediatra</option>
+                        </select>
+                        <div class="error-message" id="ag-especialista-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ag-horario">Horário Preferencial*</label>
+                        <select id="ag-horario" name="horario" required>
+                            <option value="">Selecione um horário</option>
+                            <option value="Manhã (8h-12h)">Manhã (8h-12h)</option>
+                            <option value="Tarde (13h-17h)">Tarde (13h-17h)</option>
+                            <option value="Noite (18h-21h)">Noite (18h-21h)</option>
+                        </select>
+                        <div class="error-message" id="ag-horario-error"></div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
+            </form>
+        </div>
+    </section>
+
+
+    <section class="specialties-section" id="especialidades">
+        <div class="container">
+            <h2 class="section-title">Nossas Especialidades</h2>
+            <p class="section-subtitle">Cuidado integral para todas as fases da vida</p>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Cardiologia</h3>
+                    <p>Exames preventivos e tratamentos cardíacos com tecnologia de última geração</p>
+                    <a href="#cardio" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurologia</h3>
+                    <p>Diagnóstico e tratamento de doenças do sistema nervoso</p>
+                    <a href="#neuro" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Ortopedia</h3>
+                    <p>Cuidados com ossos, articulações e sistema musculoesquelético</p>
+                    <a href="#orto" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="specialty-card">
+                    <div class="card-icon"><i class="fas fa-lungs"></i></div>
+                    <h3>Pneumologia</h3>
+                    <p>Tratamento de doenças respiratórias e pulmonares</p>
+                    <a href="#pneumo" class="card-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="technology-section" id="tecnologia">
+        <div class="container">
+            <h2 class="section-title">Tecnologia a Serviço da Saúde</h2>
+            <div class="tech-showcase">
+                <div class="tech-item">
+                    <div class="tech-image">
+                        <img src="img/ia saude.jpg" alt="Inteligência Artificial na saúde" loading="lazy">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Inteligência Artificial</h3>
+                        <p>Nossos sistemas de IA auxiliam os médicos no diagnóstico preciso e precoce</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check-circle"></i> Análise de exames em segundos</li>
+                            <li><i class="fas fa-check-circle"></i> Padronização de laudos</li>
+                            <li><i class="fas fa-check-circle"></i> Redução de erros</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-item reversed">
+                    <div class="tech-image">
+                        <img src="img/telemedicina.png" alt="Telemedicina" loading="lazy">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Telemedicina</h3>
+                        <p>Consultas remotas com a mesma qualidade do atendimento presencial</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check-circle"></i> Sem necessidade de deslocamento</li>
+                            <li><i class="fas fa-check-circle"></i> Prescrições digitais</li>
+                            <li><i class="fas fa-check-circle"></i> Integração com prontuário</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section class="team-section" id="equipe">
+  <div class="container">
+    <h2 class="section-title">Nossa Equipe Vitalink</h2>
+    <div class="team-grid">
+
+      <div class="team-member">
+        <img src="img/nathan.PNG" alt="Nathanael Vieira">
+        <h3>Nathanael Vieira</h3>
+        <p>RM - 564990</p>
+        <p>Desenvolvedor</p>
+        <div class="social-logos">
+          <a href="https://github.com/NathanaelV" target="_blank" title="GitHub do Nathanael">
+            <img src="img/logos/github.png" class="social-icon" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/nathanael-c%C3%A2ndido-mattos-vieira-392108129/" target="_blank" title="LinkedIn do Nathanael">
+            <img src="img/logos/linkedln.png" class="social-icon" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/augusto.jpg" alt="Augusto Bonomo Junior">
+        <h3>Augusto Bonomo Junior</h3>
+        <p>RM - 565155</p>
+        <p>Líder</p>
+        <div class="social-logos">
+          <a href="https://github.com/AugustoBJunior" target="_blank" title="GitHub do Augusto">
+            <img src="img/logos/github.png" class="social-icon" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/augusto-junior-bonomo-32777896" target="_blank" title="LinkedIn do Augusto">
+            <img src="img/logos/linkedln.png" class="social-icon" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/rodrigo.PNG" alt="Rodrigo Silva">
+        <h3>Rodrigo Silva</h3>
+        <p>RM - 565162</p>
+        <p>Vendedor</p>
+        <div class="social-logos">
+          <a href="https://github.com/Rcsilva05" target="_blank" title="GitHub do Rodrigo">
+            <img src="img/logos/github.png" class="social-icon" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/rodrigo-carvalho-silva-158373355/" target="_blank" title="LinkedIn do Rodrigo">
+            <img src="img/logos/linkedln.png" class="social-icon" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Estamos à disposição para melhor atendê-lo</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione um assunto</option>
+                        <option value="Agendamento">Agendamento</option>
+                        <option value="Cancelamento">Cancelamento</option>
+                        <option value="Dúvidas">Dúvidas</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Como posso agendar uma consulta?</h3>
+                    <div class="faq-answer">
+                        <p>Você pode agendar consultas através do nosso site, aplicativo ou por telefone. Basta clicar no botão "Marque sua consulta" e seguir as instruções.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Quais são as formas de pagamento?</h3>
+                    <div class="faq-answer">
+                        <p>Aceitamos cartões de crédito (todas as bandeiras), débito, PIX e transferência bancária. Também aceitamos os principais convênios médicos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">Como funciona o cancelamento?</h3>
+                    <div class="faq-answer">
+                        <p>Cancelamentos podem ser feitos até 24h antes da consulta sem custos. Após esse período, pode ser cobrada uma taxa de acordo com nossa política.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-imagem">
+                    <img src="img/VITALLINK TECNOLOGIA.jpg" style="border-radius: 15px;" alt="Vitalink" class="footer-logo">
+                    <p>Tecnologia e humanização caminhando juntas para sua saúde</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#tecnologia">Serviços</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#equipe">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone-alt"></i> (11) 1234-5678</li>
+                        <li><i class="fas fa-whatsapp"></i> (11) 98765-4321</li>
+                        <li><i class="fas fa-envelope"></i> contato@vitalink.com.br</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Horário de Funcionamento</h4>
+                    <ul class="opening-hours">
+                        <li>Segunda a Sexta: 7h às 19h</li>
+                        <li>Sábado: 8h às 14h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vitalink. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -7,33 +7,33 @@ A solução será oferecida a clínicas e hospitais, com modelo de receita basea
 A primeira fase de implantação ocorrerá em São Paulo, visando reduzir faltas e melhorar a experiência do paciente idoso.
 Nosso objetivo é promover inclusão digital na saúde, modernizando o atendimento com foco no cuidado humanizado.
 
-Estrutura de pastas e arquivos: 
-vitalink/
-├── index.html                # Página principal do site
-├── script.js                 # Arquivo JavaScript com interações
-├── style.css                 # Estilos da página
-├── img/                      # Pasta com imagens usadas no projeto
-│   ├── VITALLINK TECNOLOGIA.jpg
-│   ├── augusto.jpg
-│   ├── ia saude.jpg
-│   ├── nathan.PNG
-│   ├── rodrigo.PNG
-│   ├── telemedicina.png
-│   └── logos/                # Subpasta com logos
-│       ├── github.png
-│       └── linkedln.png
+## Estrutura de pastas e arquivos
 
-Tecnologia Utilizada: 
+vitalink/                       <br>
+├── index.html $\quad$ &nbsp;           # Página principal do site                <br>
+├── script.js  $\quad$ $\quad$ &nbsp;   # Arquivo JavaScript com interações       <br>
+├── style.css  $\quad$ $\quad$          # Estilos da página                       <br>
+├── img/ $\quad$ $\quad$ $\quad$ &nbsp; # Pasta com imagens usadas no projeto     <br>
+│ $\quad$ ├── VITALLINK TECNOLOGIA.jpg                      <br>
+│ $\quad$ ├── augusto.jpg                                   <br>
+│ $\quad$ ├── ia saude.jpg                                  <br>
+│ $\quad$ ├── nathan.PNG                                    <br>
+│ $\quad$ ├── rodrigo.PNG                                   <br>
+│ $\quad$ ├── telemedicina.png                              <br>
+│ $\quad$ └── logos/                # Subpasta com logos    <br>
+│ $\quad$ $\quad$ ├── github.png      <br>
+│ $\quad$ $\quad$ └── linkedln.png    <br>
+
+## Tecnologia Utilizada: 
 - **HTML5** – Marcação da estrutura das páginas
 - **CSS3** – Estilização do layout e responsividade
 - **JavaScript (Vanilla JS)** – Lógica de interação da página
 - **Editor de código:** VS Code (opcional, se quiser informar)
 - **Imagens e assets estáticos** – PNG, JPG usados para identidade visual
 
-Integrantes do Grupo:
-Augusto Bonomo Junior - RM565155
-Nathanael Cândido Mattos Vieira - RM564990
-Rodrigo Carvalho Silva - RM565162
+Integrantes do Grupo
+Augusto Bonomo Junior - RM565155            <br>
+Nathanael Cândido Mattos Vieira - RM564990  <br>
+Rodrigo Carvalho Silva - RM565162           <br>
 
 Endereço Repositório do Projeto no GITHUB: https://github.com/NathanaelV/FIAP-Challenge-Front-end 
-

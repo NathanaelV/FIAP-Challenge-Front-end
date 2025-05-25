@@ -1,14 +1,12 @@
-js
-
 document.addEventListener('DOMContentLoaded', function() {
-    
+    // ========== ACESSIBILIDADE ==========
     const body = document.body;
     let fontSize = 16;
     const fontStep = 2;
     const minFontSize = 12;
     const maxFontSize = 22;
 
-    
+    // Aumentar fonte
     document.getElementById('font-increase')?.addEventListener('click', () => {
         if (fontSize < maxFontSize) {
             fontSize += fontStep;
@@ -16,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Diminuir fonte
     document.getElementById('font-decrease')?.addEventListener('click', () => {
         if (fontSize > minFontSize) {
             fontSize -= fontStep;
@@ -23,35 +22,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
+    // Alto contraste
     document.getElementById('high-contrast')?.addEventListener('click', () => {
         body.classList.toggle('high-contrast');
         localStorage.setItem('highContrast', body.classList.contains('high-contrast'));
     });
 
-    
+    // Carregar preferência de contraste
     if (localStorage.getItem('highContrast') === 'true') {
         body.classList.add('high-contrast');
     }
 
-    
-    const menuToggle = document.querySelector('.menu-toggle');
+    // ========== MENU HAMBÚRGUER ==========
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
     const mainNav = document.querySelector('.main-nav');
 
-    menuToggle?.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        menuToggle.setAttribute('aria-expanded', mainNav.classList.contains('active'));
-    });
-
-    
-    document.querySelectorAll('.main-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            mainNav?.classList.remove('active');
-            menuToggle?.setAttribute('aria-expanded', 'false');
+    if (menuHamburguer && mainNav) {
+        menuHamburguer.setAttribute('aria-expanded', 'false');
+        
+        // Abrir/fechar menu
+        menuHamburguer.addEventListener('click', () => {
+            const isExpanded = mainNav.classList.toggle('active');
+            menuHamburguer.setAttribute('aria-expanded', isExpanded.toString());
         });
-    });
 
-    
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                menuHamburguer.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    // ========== FORMULÁRIO DE AGENDAMENTO ==========
     const agendamentoForm = document.getElementById('agendamento-form');
     
     if (agendamentoForm) {
@@ -80,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             let isValid = true;
 
-            // Validar todos os campos
             isValid &= validateField(
                 document.getElementById('ag-nome'),
                 document.getElementById('ag-nome-error'),
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
+    // ========== SCROLL SUAVE PARA LINKS INTERNOS ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -132,18 +135,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
 
-                
                 history.pushState(null, null, targetId);
             }
         });
     });
 
-    
+    // ========== FAQ (ACORDEÃO) ==========
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
             const faqItem = question.parentElement;
             const isOpening = !faqItem.classList.contains('active');
-            
             
             if (isOpening) {
                 document.querySelectorAll('.faq-item').forEach(item => {
@@ -155,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-   
+    // ========== DETALHES DE ESPECIALIDADES ==========
     const specialtyContents = {
         cardio: {
             title: 'Cardiologia',
@@ -200,7 +201,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 
-               
                 const headerHeight = document.querySelector('.main-header')?.offsetHeight || 100;
                 window.scrollTo({
                     top: section.offsetTop - headerHeight,

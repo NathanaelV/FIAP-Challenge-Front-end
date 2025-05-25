@@ -29,3 +29,9 @@ Tecnologia Utilizada:
 - **JavaScript (Vanilla JS)** – Lógica de interação da página
 - **Editor de código:** VS Code (opcional, se quiser informar)
 - **Imagens e assets estáticos** – PNG, JPG usados para identidade visual
+
+Integrantes do Grupo:
+Augusto Bonomo Junior - RM565155
+Nathanael Cândido Mattos Vieira - RM564990
+Rodrigo Carvalho Silva - RM565162
+
